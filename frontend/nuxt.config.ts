@@ -1,6 +1,11 @@
+```ts
 import tailwindcss from "@tailwindcss/vite";
 
-const apiBase = process.env.NUXT_PUBLIC_API_BASE || (process.env.NODE_ENV === "production" ? "" : "http://localhost:5000");
+const apiBase =
+  process.env.NUXT_PUBLIC_API_BASE ||
+  (process.env.NODE_ENV === "production"
+    ? ""
+    : "http://localhost:5000");
 
 export default defineNuxtConfig({
   compatibilityDate: "2026-09-28",
@@ -46,5 +51,4 @@ export default defineNuxtConfig({
     },
   },
 });
-
-
+```
