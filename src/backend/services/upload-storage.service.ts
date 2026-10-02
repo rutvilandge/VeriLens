@@ -1,7 +1,10 @@
 import fs from "node:fs";
+import os from "node:os";
 import path from "node:path";
 
-export const uploadRoot = path.resolve(process.cwd(), "uploads");
+export const uploadRoot = process.env.VERCEL === "1"
+  ? path.join(os.tmpdir(), "verilens-uploads")
+  : path.resolve(process.cwd(), "uploads");
 export const imageUploadDirectory = path.join(uploadRoot, "images");
 
 export function ensureImageUploadDirectory() {

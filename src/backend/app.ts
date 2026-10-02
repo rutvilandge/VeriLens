@@ -1,8 +1,10 @@
 import express from "express";
 import cors from "cors";
 import helmet from "helmet";
+import type { HelmetOptions } from "helmet";
+import type { RequestHandler } from "express";
 import cookieParser from "cookie-parser";
-import rateLimit from "express-rate-limit";
+import { rateLimit } from "express-rate-limit";
 import uploadsRoutes from "./routes/uploads.routes.js";
 
 import { authHandler } from "./auth/auth.js";
@@ -15,6 +17,7 @@ import intelligenceRoutes from "./routes/intelligence.routes.js";
 import { errorMiddleware } from "./middleware/error.middleware.js";
 
 const app = express();
+const helmetMiddleware = helmet as unknown as (options?: HelmetOptions) => RequestHandler;
 
 /**
  * ---------------------------------------------------------
@@ -34,7 +37,7 @@ app.set("trust proxy", true);
  */
 
 app.use(
-  helmet({
+  helmetMiddleware({
     crossOriginResourcePolicy: false,
   }),
 );

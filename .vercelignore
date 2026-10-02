@@ -1,0 +1,17 @@
+.git/
+.vercel/
+node_modules/
+frontend/
+ml/
+data/
+.venv/
+venv/
+uploads/
+.env
+.env.*
+!.env.example
+coverage/
+dist/
+build/
+.nuxt/
+.output/
