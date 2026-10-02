@@ -41,6 +41,13 @@
 </p>
 
 ---
+### 🌐Live Experience
+
+**[ ◈ Enter the VeriLens Experience](https://veri-lens-ashen.vercel.app)**
+
+> *Content → Intelligence → Evidence → Verdict*
+
+---
 
 ## 🖤 The Idea
 
@@ -95,7 +102,7 @@ The product is built around **evidence-first intelligence**, not just classifica
 
 ---
 
-# 📚 Table of Contents
+## 📚 Table of Contents
 
 - [✨ What is VeriLens?](#-what-is-verilens)
 - [🎯 Problem](#-problem)
@@ -181,7 +188,7 @@ GENERATE REPORT
 
 ---
 
-# 🎯 Problem
+## 🎯 Problem
 
 Digital information increasingly combines:
 
