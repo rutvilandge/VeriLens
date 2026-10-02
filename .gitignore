@@ -1,0 +1,119 @@
+# ============================================================
+# VERILENS — Git Ignore
+# ============================================================
+
+# ------------------------------------------------------------
+# Dependencies
+# ------------------------------------------------------------
+node_modules/
+.venv/
+venv/
+.pnpm-store/
+.yarn/
+.yarn-cache/
+
+# ------------------------------------------------------------
+# Nuxt / Vite / Frontend build output
+# ------------------------------------------------------------
+.nuxt/
+.output/
+dist/
+build/
+.nitro/
+.cache/
+.vite/
+
+# ------------------------------------------------------------
+# Environment & secrets
+# ------------------------------------------------------------
+.env
+.env.*
+!.env.example
+
+# Python caches and generated model/data outputs
+__pycache__/
+*.py[cod]
+data/
+ml/datasets/**/raw/
+ml/datasets/**/processed/
+ml/datasets/**/cpu_subset/
+ml/datasets/vision/cifake/splits/
+ml/models/*/saved/
+ml/**/artifacts/
+ml/evaluation/**/*_results.*
+ml/evaluation/**/*_comparison.*
+ml/evaluation/**/*_summary.*
+ml/evaluation/classical_ml_best_model.json
+
+# ------------------------------------------------------------
+# Logs
+# ------------------------------------------------------------
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# ------------------------------------------------------------
+# VeriLens uploaded files
+# ------------------------------------------------------------
+uploads/*
+!uploads/.gitkeep
+!uploads/images/
+uploads/images/*
+!uploads/images/.gitkeep
+
+# ------------------------------------------------------------
+# Test / coverage output
+# ------------------------------------------------------------
+coverage/
+.nyc_output/
+playwright-report/
+test-results/
+
+# ------------------------------------------------------------
+# Prisma local artifacts
+# ------------------------------------------------------------
+prisma/*.db
+prisma/*.db-journal
+
+# ------------------------------------------------------------
+# Operating system files
+# ------------------------------------------------------------
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ------------------------------------------------------------
+# IDE / editor
+# ------------------------------------------------------------
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+.idea/
+*.iml
+
+# ------------------------------------------------------------
+# Temporary files
+# ------------------------------------------------------------
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# ------------------------------------------------------------
+# Certificates / private keys
+# ------------------------------------------------------------
+*.pem
+*.key
+*.p12
+*.pfx
+
+# ------------------------------------------------------------
+# Miscellaneous
+# ------------------------------------------------------------
+.vercel/
+.turbo/

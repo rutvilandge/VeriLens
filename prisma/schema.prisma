@@ -1,0 +1,250 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id           String   @id @default(cuid())
+  name         String
+  email        String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  analyses Analysis[]
+  activityEvents ActivityEvent[]
+
+  @@index([email])
+}
+
+model Analysis {
+  id        String         @id @default(cuid())
+  userId    String
+  title     String
+  status    AnalysisStatus @default(DRAFT)
+  createdAt DateTime       @default(now())
+  updatedAt DateTime       @updatedAt
+
+  user             User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  analysisContents AnalysisContent[]
+  predictions      Prediction[]
+
+  @@index([userId])
+  @@index([userId, createdAt])
+}
+
+enum AnalysisStatus {
+  DRAFT
+  QUEUED
+  PROCESSING
+  COMPLETED
+  FAILED
+}
+
+model AnalysisContent {
+  id         String      @id @default(cuid())
+  analysisId String
+  type       ContentType
+
+  title     String?
+  text      String?
+  sourceUrl String?
+
+  // Image / file metadata
+  fileUrl  String?
+  fileName String?
+  mimeType String?
+  fileSize Int?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  analysis    Analysis     @relation(fields: [analysisId], references: [id], onDelete: Cascade)
+  predictions Prediction[]
+
+  @@index([analysisId])
+  @@index([analysisId, type])
+}
+
+model ActivityEvent {
+  id            String   @id @default(cuid())
+  userId        String
+  analysisId    String?
+  analysisTitle String?
+  contentId     String?
+  contentTitle  String?
+  predictionId  String?
+  event         String
+  status        String
+  details       Json?
+  createdAt     DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, createdAt])
+  @@index([analysisId])
+}
+enum ContentType {
+  TEXT
+  IMAGE
+  SOURCE
+}
+
+model AIModel {
+  id          String      @id @default(cuid())
+  name        String
+  slug        String      @unique
+  description String?
+  type        ModelType
+  status      ModelStatus @default(DEVELOPMENT)
+
+  provider String?
+  task     String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  versions    ModelVersion[]
+  experiments Experiment[]
+  predictions Prediction[]
+
+  @@index([type])
+  @@index([status])
+}
+
+model ModelVersion {
+  id          String  @id @default(cuid())
+  modelId     String
+  version     String
+  description String?
+
+  status ModelVersionStatus @default(DEVELOPMENT)
+
+  framework  String?
+  modelPath  String?
+  parameters Json?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  model       AIModel           @relation(fields: [modelId], references: [id], onDelete: Cascade)
+  evaluations ModelEvaluation[]
+  predictions Prediction[]
+
+  @@unique([modelId, version])
+  @@index([modelId])
+  @@index([status])
+}
+
+model ModelEvaluation {
+  id             String @id @default(cuid())
+  modelVersionId String
+
+  datasetName String?
+
+  accuracy  Float?
+  precision Float?
+  recall    Float?
+  f1Score   Float?
+
+  sampleCount Int?
+
+  createdAt DateTime @default(now())
+
+  modelVersion ModelVersion @relation(fields: [modelVersionId], references: [id], onDelete: Cascade)
+
+  @@index([modelVersionId])
+}
+
+model Experiment {
+  id      String @id @default(cuid())
+  modelId String
+
+  name        String
+  description String?
+
+  configuration Json?
+  results       Json?
+
+  status ExperimentStatus @default(PENDING)
+
+  startedAt   DateTime?
+  completedAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  model AIModel @relation(fields: [modelId], references: [id], onDelete: Cascade)
+
+  @@index([modelId])
+  @@index([status])
+}
+
+model Prediction {
+  id String @id @default(cuid())
+
+  analysisId     String
+  contentId      String?
+  modelId        String?
+  modelVersionId String?
+
+  prediction String
+  confidence Float
+
+  signals  Json?
+  metadata Json?
+
+  status PredictionStatus @default(COMPLETED)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  analysis     Analysis         @relation(fields: [analysisId], references: [id], onDelete: Cascade)
+  content      AnalysisContent? @relation(fields: [contentId], references: [id], onDelete: Cascade)
+  model        AIModel?         @relation(fields: [modelId], references: [id], onDelete: SetNull)
+  modelVersion ModelVersion?    @relation(fields: [modelVersionId], references: [id], onDelete: SetNull)
+
+  @@index([analysisId])
+  @@index([contentId])
+  @@index([modelId])
+  @@index([modelVersionId])
+  @@index([createdAt])
+}
+
+enum PredictionStatus {
+  QUEUED
+  PROCESSING
+  COMPLETED
+  FAILED
+}
+
+enum ModelType {
+  TEXT_AUTHENTICITY
+  AI_GENERATED_TEXT
+  IMAGE_AUTHENTICITY
+  MULTIMODAL
+}
+
+enum ModelStatus {
+  DEVELOPMENT
+  READY
+  DEPLOYED
+  ARCHIVED
+}
+
+enum ModelVersionStatus {
+  DEVELOPMENT
+  READY
+  DEPLOYED
+  ARCHIVED
+}
+
+enum ExperimentStatus {
+  PENDING
+  RUNNING
+  COMPLETED
+  FAILED
+}
+
