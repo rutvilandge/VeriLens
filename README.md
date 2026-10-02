@@ -5,7 +5,7 @@
 ╚══════════════════════════════════════════════════════════════════════════════╝
 -->
 
-# 🔎 VeriLens
+## 🔎 VeriLens
 
 ### **Multimodal AI Authenticity & Evidence Intelligence Platform**
 
@@ -125,7 +125,7 @@ The product is built around **evidence-first intelligence**, not just classifica
 
 ---
 
-# ✨ What is VeriLens?
+## ✨ What is VeriLens?
 
 VeriLens is a **Multimodal AI Authenticity & Evidence Intelligence Platform**.
 
@@ -212,7 +212,7 @@ Can the result be explained?
 
 ---
 
-# 💡 Vision
+## 💡 Vision
 
 The long-term vision is to create an investigation system where AI intelligence remains connected to the evidence that produced it.
 
@@ -236,7 +236,7 @@ flowchart TD
 
 ---
 
-# 🧭 Product Philosophy
+## 🧭 Product Philosophy
 
 ## 1. Evidence first
 
@@ -273,7 +273,7 @@ The interface uses cinematic visual language while protecting:
 
 ---
 
-# 🧠 ML Journey
+## 🧠 ML Journey
 
 VeriLens started as an ML problem before becoming a full-stack product.
 
@@ -303,7 +303,7 @@ The ML work established the foundation for the later product architecture.
 
 ---
 
-# 📊 Dataset Journey
+## 📊 Dataset Journey
 
 VeriLens worked through **three major dataset directions**:
 
@@ -327,7 +327,7 @@ MULTIMODAL INTELLIGENCE
 
 ---
 
-# 📝 LIAR-2
+## 📝 LIAR-2
 
 LIAR-2 formed the early claim and text-oriented foundation.
 
@@ -369,7 +369,7 @@ PREDICTION
 
 ---
 
-# 🖼️ CIFAKE
+## 🖼️ CIFAKE
 
 CIFAKE established the computer-vision side of the project.
 
@@ -400,7 +400,7 @@ This was the point where VeriLens moved beyond text.
 
 ---
 
-# 🧩 Fakeddit
+## 🧩 Fakeddit
 
 Fakeddit introduced the multimodal direction.
 
@@ -431,7 +431,7 @@ MULTIMODAL
 
 ---
 
-# 🔀 Multimodal Direction
+## 🔀 Multimodal Direction
 
 The dataset journey established the central product idea.
 
@@ -463,7 +463,7 @@ This became the foundation for the product's evidence-first architecture.
 
 ---
 
-# 🏗️ Product Evolution
+## 🏗️ Product Evolution
 
 VeriLens evolved through layers.
 
@@ -488,7 +488,7 @@ flowchart TD
 
 ---
 
-# ⚙️ Tech Stack
+## ⚙️ Tech Stack
 
 ## 🎨 Frontend
 
@@ -545,7 +545,7 @@ flowchart TD
 
 ---
 
-# 🧱 System Architecture
+## 🧱 System Architecture
 
 ```text
                          ┌───────────────────┐
@@ -591,7 +591,7 @@ flowchart TD
 
 ---
 
-# 🔄 Complete System Flow
+## 🔄 Complete System Flow
 
 ```mermaid
 flowchart TD
@@ -619,7 +619,7 @@ flowchart TD
 
 ---
 
-# 🎨 Frontend Architecture
+## 🎨 Frontend Architecture
 
 The frontend is built with Nuxt 4 and Vue 3.
 
@@ -659,7 +659,7 @@ frontend/
 
 ---
 
-# 🚀 Backend Architecture
+## 🚀 Backend Architecture
 
 The Express application is organized around API boundaries and services.
 
@@ -686,7 +686,7 @@ src/backend/
 
 ---
 
-# 🗄️ Database Architecture
+## 🗄️ Database Architecture
 
 Core relational structure:
 
@@ -719,7 +719,7 @@ ActivityEvent
 
 ---
 
-# 🔐 Authentication
+## 🔐 Authentication
 
 VeriLens uses Auth.js Credentials.
 
@@ -745,7 +745,7 @@ Protected resources verify the authenticated user before returning account-owned
 
 ---
 
-# 📁 Evidence Architecture
+## 📁 Evidence Architecture
 
 VeriLens supports:
 
@@ -811,7 +811,7 @@ DEPLOYED
 
 ---
 
-# 🔮 Prediction Engine
+## 🔮 Prediction Engine
 
 The Prediction Engine creates persisted prediction records.
 
@@ -847,7 +847,7 @@ updatedAt
 
 ---
 
-# 🕸️ Evidence Intelligence
+## 🕸️ Evidence Intelligence
 
 Evidence Intelligence aggregates investigation-wide context.
 
@@ -878,7 +878,7 @@ The Evidence page can aggregate evidence across analyses and expose analysis and
 
 ---
 
-# 🧠 Explainability
+## 🧠 Explainability
 
 Explainability connects outputs to the information behind them.
 
@@ -904,7 +904,7 @@ Reports therefore support a clear **no overall verdict** state.
 
 ---
 
-# 🌐 Knowledge Graph
+## 🌐 Knowledge Graph
 
 The Knowledge Graph is the relationship view of an investigation.
 
@@ -925,7 +925,7 @@ The graph makes relationships easier to reason about than a flat list of records
 
 ---
 
-# ⚡ AI Pipeline
+## ⚡ AI Pipeline
 
 The AI Pipeline is the process view.
 
@@ -965,7 +965,7 @@ The AI Pipeline is the process view.
 
 ---
 
-# 📑 Reports
+## 📑 Reports
 
 Reports bring investigation context together.
 
@@ -1024,7 +1024,7 @@ has been applied successfully to the Neon database.
 
 ---
 
-# ⚙️ Settings
+## ⚙️ Settings
 
 Settings are part of the authenticated application layer.
 
@@ -1067,7 +1067,7 @@ Dashboard statistics are connected to backend data rather than being purely deco
 
 ---
 
-# 🛡️ Security
+## 🛡️ Security
 
 Security layers include:
 
@@ -1106,7 +1106,7 @@ Implemented considerations include:
 
 ---
 
-# 🚀 Production Architecture
+## 🚀 Production Architecture
 
 The final target is Vercel.
 
@@ -1142,7 +1142,7 @@ Persistent object storage must be handled separately for durable uploaded files 
 
 ---
 
-# 🔁 CI/CD
+## 🔁 CI/CD
 
 GitHub Actions validates the project before deployment.
 
@@ -1174,7 +1174,7 @@ before production.
 
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
 ```text
 VeriLens/
@@ -1223,7 +1223,7 @@ VeriLens/
 
 ---
 
-# 🧪 Verification
+## 🧪 Verification
 
 The implementation has been verified through:
 
@@ -1257,7 +1257,7 @@ HTTP 200
 
 ---
 
-# 🎨 Design System
+## 🎨 Design System
 
 VeriLens uses a premium editorial visual direction.
 
@@ -1370,7 +1370,7 @@ npm run dev
 
 ---
 
-# 🔑 Environment Variables
+## 🔑 Environment Variables
 
 Example:
 
@@ -1403,7 +1403,7 @@ DATABASE_URL
 
 ---
 
-# 🌐 API Reference
+## 🌐 API Reference
 
 ## ❤️ Health
 
@@ -1471,7 +1471,7 @@ GET /api/session/me
 
 ---
 
-# 🧭 Development Roadmap
+## 🧭 Development Roadmap
 
 ## Phase 0 — Foundation
 
@@ -1945,7 +1945,7 @@ Production
 
 ---
 
-# 🧩 Architecture Principles
+## 🧩 Architecture Principles
 
 ### Frontend
 
@@ -2035,7 +2035,7 @@ It is a chain of engineering layers.
 
 ---
 
-# 🏁 Final State
+## 🏁 Final State
 
 At the end of the engineering phase, VeriLens contains:
 
@@ -2067,7 +2067,7 @@ At the end of the engineering phase, VeriLens contains:
 
 ---
 
-# ☁️ Final Deployment Path
+## ☁️ Final Deployment Path
 
 ```mermaid
 flowchart LR
@@ -2083,7 +2083,7 @@ The final remaining product milestone is deployment.
 
 ---
 
-# 🖤 Closing
+## 🖤 Closing
 
 VeriLens started with datasets.
 
@@ -2138,7 +2138,7 @@ PRODUCTION
 
 ---
 
-# 📘 Implementation Appendix
+## 📘 Implementation Appendix
 
 ## A. Core Domain Model
 
@@ -2257,7 +2257,7 @@ This separation keeps the dashboard readable as the product grows.
 
 ---
 
-# 🔎 Analysis Flow
+## 🔎 Analysis Flow
 
 ```text
 DASHBOARD
@@ -2277,7 +2277,7 @@ The analysis becomes the container for every later investigation operation.
 
 ---
 
-# 📝 Text Evidence Flow
+## 📝 Text Evidence Flow
 
 ```text
 USER
@@ -2299,7 +2299,7 @@ RUN ANALYSIS
 
 ---
 
-# 🖼️ Image Evidence Flow
+## 🖼️ Image Evidence Flow
 
 ```text
 USER
@@ -2323,7 +2323,7 @@ Production deployment must replace ephemeral local storage with durable object s
 
 ---
 
-# 🔗 Source Evidence Flow
+## 🔗 Source Evidence Flow
 
 ```text
 USER
@@ -2343,7 +2343,7 @@ SOURCE EVIDENCE
 
 ---
 
-# 🔮 Prediction Flow
+## 🔮 Prediction Flow
 
 ```text
 RUN ANALYSIS
@@ -2367,7 +2367,7 @@ PERSIST
 
 ---
 
-# 📊 Dashboard Data Flow
+## 📊 Dashboard Data Flow
 
 ```mermaid
 flowchart LR
@@ -2385,7 +2385,7 @@ The dashboard is therefore connected to backend state.
 
 ---
 
-# 🧠 Explainability Flow
+## 🧠 Explainability Flow
 
 ```text
 PREDICTION
@@ -2407,7 +2407,7 @@ CONFIDENCE      SIGNALS
 
 ---
 
-# 🕸️ Graph Flow
+## 🕸️ Graph Flow
 
 ```text
 ANALYSIS
@@ -2425,7 +2425,7 @@ The graph is a visual interpretation of investigation relationships.
 
 ---
 
-# 📑 Report Flow
+## 📑 Report Flow
 
 ```text
 ANALYSIS
@@ -2445,7 +2445,7 @@ EXPLANATION
 
 ---
 
-# 📝 Activity Flow
+## 📝 Activity Flow
 
 ```text
 USER ACTION
@@ -2463,7 +2463,7 @@ ACTIVITY PAGE
 
 ---
 
-# 🛡️ Request Security Flow
+## 🛡️ Request Security Flow
 
 ```text
 REQUEST
@@ -2489,7 +2489,7 @@ DATABASE
 
 ---
 
-# 🧱 Layered Architecture
+## 🧱 Layered Architecture
 
 ```text
 ┌─────────────────────────────────────────────┐
@@ -2512,7 +2512,7 @@ DATABASE
 
 ---
 
-# 🧪 Engineering Verification Matrix
+## 🧪 Engineering Verification Matrix
 
 | Layer | Verification |
 |---|---|
@@ -2534,7 +2534,7 @@ DATABASE
 
 ---
 
-# 🗃️ Database Migration State
+## 🗃️ Database Migration State
 
 The production-style database migration sequence includes the project schema evolution.
 
@@ -2554,7 +2554,7 @@ was applied to the Neon PostgreSQL database.
 
 ---
 
-# 🧰 Developer Commands
+## 🧰 Developer Commands
 
 ## Backend
 
@@ -2592,7 +2592,7 @@ npx prisma migrate deploy
 
 ---
 
-# 🚦 Runtime Model
+## 🚦 Runtime Model
 
 Local:
 
@@ -2631,7 +2631,7 @@ Vercel
 
 ---
 
-# 🌱 Environment Separation
+## 🌱 Environment Separation
 
 ```text
 LOCAL
@@ -2657,7 +2657,7 @@ No production secret belongs in the repository.
 
 ---
 
-# 🧩 Why Prisma
+## 🧩 Why Prisma
 
 Prisma provides:
 
@@ -2677,7 +2677,7 @@ This keeps the application data model explicit.
 
 ---
 
-# 🧩 Why PostgreSQL
+## 🧩 Why PostgreSQL
 
 The investigation domain is relational.
 
@@ -2701,7 +2701,7 @@ PostgreSQL is therefore a natural persistence foundation for the product.
 
 ---
 
-# 🧩 Why Express
+## 🧩 Why Express
 
 Express provides a clear API boundary.
 
@@ -2721,7 +2721,7 @@ This keeps backend concerns separate from frontend presentation.
 
 ---
 
-# 🧩 Why Nuxt
+## 🧩 Why Nuxt
 
 Nuxt provides:
 
@@ -2741,7 +2741,7 @@ The result is a structured Vue application suitable for a multi-page intelligenc
 
 ---
 
-# 🧩 Why Auth.js
+## 🧩 Why Auth.js
 
 Authentication needs:
 
@@ -2759,7 +2759,7 @@ Auth.js provides the authentication foundation while user records remain in Post
 
 ---
 
-# 📦 Feature Inventory
+## 📦 Feature Inventory
 
 ## Investigation
 
@@ -2804,7 +2804,7 @@ Logout
 
 ---
 
-# 📊 Product Surface Map
+## 📊 Product Surface Map
 
 ```text
                          DASHBOARD
@@ -2821,7 +2821,7 @@ Logout
 
 ---
 
-# 🎯 Product Goals
+## 🎯 Product Goals
 
 ### Goal 01
 
@@ -2853,7 +2853,7 @@ Prepare the system for production deployment.
 
 ---
 
-# 🧠 Intelligence Principles
+## 🧠 Intelligence Principles
 
 ```text
 MODEL OUTPUT
@@ -2879,7 +2879,7 @@ This is one of the central ideas behind VeriLens.
 
 ---
 
-# 🔍 Evidence Principles
+## 🔍 Evidence Principles
 
 Evidence should be:
 
@@ -2897,7 +2897,7 @@ EXPLAINED
 
 ---
 
-# 🧠 Model Principles
+## 🧠 Model Principles
 
 Models should have identity.
 
@@ -2917,7 +2917,7 @@ This avoids treating the AI layer as one giant opaque function.
 
 ---
 
-# 📑 Reporting Principles
+## 📑 Reporting Principles
 
 A report should answer:
 
@@ -2932,7 +2932,7 @@ WHAT REMAINS UNCERTAIN?
 
 ---
 
-# 🎨 Visual Principles
+## 🎨 Visual Principles
 
 ```text
 LESS DECORATION
@@ -2948,7 +2948,7 @@ The interface should communicate state visually.
 
 ---
 
-# 🚀 Deployment Readiness
+## 🚀 Deployment Readiness
 
 Before deployment:
 
@@ -2971,7 +2971,7 @@ Before deployment:
 
 ---
 
-# ☁️ Vercel Endgame
+## ☁️ Vercel Endgame
 
 The final sequence:
 
@@ -2999,7 +2999,7 @@ The final sequence:
 
 ---
 
-# 🏆 What the Project Demonstrates
+## 🏆 What the Project Demonstrates
 
 VeriLens demonstrates work across:
 
@@ -3024,7 +3024,7 @@ VeriLens demonstrates work across:
 
 ---
 
-# 💫 The Full Story
+## 💫 The Full Story
 
 ```text
                          VERILENS
@@ -3081,7 +3081,7 @@ VeriLens demonstrates work across:
 
 ---
 
-# 🖤 Final Note
+## 🖤 Final Note
 
 This README is intentionally more than documentation.
 
@@ -3111,7 +3111,7 @@ HOW IT WILL SHIP
 
 <p align="center">
 
-# 🔎 VERILENS
+## 🔎 VERILENS
 
 ### **See the evidence. Understand the signals. Trace the story.**
 
